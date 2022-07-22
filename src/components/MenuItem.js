@@ -24,13 +24,6 @@ const foods = [
 		image:
 			'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
 	},
-	{
-		title: 'Chicken & Waffles',
-		description: 'Our Signature Dish',
-		price: '$19.20',
-		image:
-			'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
-	},
 ];
 
 const MenuItem = () => {

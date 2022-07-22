@@ -3,7 +3,7 @@ import {
 	Text,
 	SafeAreaView,
 	View,
-	ScollView,
+  ScollView,
 	ScrollView,
 } from 'react-native';
 import { Divider } from 'react-native-elements';
@@ -22,7 +22,7 @@ import { localRestaurants } from '../data/';
 const YELP_API_KEY =
 	'3hmawgfsAI-a4bmGS_7Krd9v-5pWZo2lazdGkjtlzU_OdmeqSblfgBskUQwI8oH0m0i_rivkQ6Fo91hJQcHCzYqfjGVQvywYuu3l3VxxaoltUcUrKN4norls-61TYXYx';
 
-const Home = () => {
+const Home = ({navigation}) => {
 	const [restaurantData, setRestaurantData] = useState([]);
 	const [city, setCity] = useState('New York');
 	const [activeTab, setActiveTab] = useState('Delivery');
@@ -63,7 +63,7 @@ const Home = () => {
 			</View>
 			<ScrollView>
 				<Categories />
-				<RestaurantItem restaurantData={restaurantData} />
+        <RestaurantItem navigation={navigation}  restaurantData={restaurantData} />
 			</ScrollView>
 			<Divider width={1} />
 			<BottomTabs />
