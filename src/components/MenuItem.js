@@ -11,18 +11,18 @@ const foods = [
 			'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
 	},
 	{
-		title: 'Chicken & Waffles',
-		description: 'Our Signature Dish',
-		price: '$19.20',
+		title: 'Sangria Pitcher',
+		description: 'Our Sangrias Made Us Famous',
+		price: '$23.50',
 		image:
-			'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
+			'https://images.prismic.io/spicygreenbook/85232b87-1fd1-4553-9d74-0695ef94c6c5_DSC01761.jpg?auto=compress,format&w=2600',
 	},
 	{
-		title: 'Chicken & Waffles',
-		description: 'Our Signature Dish',
-		price: '$19.20',
+		title: 'Cupcake Platter',
+		description: 'Imagine skipping out on this 🤔',
+		price: '$30.00',
 		image:
-			'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
+			'https://images.prismic.io/spicygreenbook/81e7cf15-208d-47a4-aba8-b4a1da67ed40_DSC03488.jpg?auto=compress,format&w=2600',
 	},
 ];
 
