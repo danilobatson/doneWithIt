@@ -1,5 +1,6 @@
-// import Features from './Features';
+import HeaderTabs from './HeaderTabs';
+import SearchBar from './SearchBar';
 // import Download from './Download';
 // import SectionWrapper from './SectionWrapper';
 
-// export { Features, Download, SectionWrapper };
+export { SearchBar, HeaderTabs };

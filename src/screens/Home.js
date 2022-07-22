@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 import React from 'react';
+import { HeaderTabs, SearchBar } from '../components';
+import { Feather } from '@expo/vector-icons';
 
 const Home = () => {
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
+			<View style={styles.subContainer}>
+				<HeaderTabs />
+				<SearchBar />
+			</View>
 			<Text>Why is Courtnie this way?</Text>
-		</View>
+			<Feather name='search' size={32} />
+		</SafeAreaView>
 	);
 };
 
@@ -13,8 +20,11 @@ export default Home;
 
 const styles = StyleSheet.create({
 	container: {
-		alignItems: 'center',
+		backgroundColor: '#eee',
 		flex: 1,
-		justifyContent: 'center',
+	},
+	subContainer: {
+		backgroundColor: 'white',
+		padding: 15,
 	},
 });
