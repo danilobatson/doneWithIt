@@ -1,17 +1,29 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 
-const image =
-	'https://images.prismic.io/spicygreenbook/c2a3d47b-b5fb-49a9-aeba-62e894a2edd7_NatashaLee-SGB-JerkMuva-5551.jpg?auto=compress,format&w=400';
+const yelpRestaurantInfo = {
+	name: "Courtnie's Citchen",
+	image:
+		'https://images.prismic.io/spicygreenbook/c2a3d47b-b5fb-49a9-aeba-62e894a2edd7_NatashaLee-SGB-JerkMuva-5551.jpg?auto=compress,format&w=400',
+	price: '$$',
+	reviews: '1500',
+	rating: 4.5,
+	categories: [{ title: 'Comfort' }, { title: 'Southern' }],
+};
 
-const title = 'Jerk Muva';
-const description = 'Southern • Comfort • Food • $$ • 4 Stars (2913+)';
+const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo;
+
+const formattedCategories = categories.map((cat) => cat.title).join(' • ');
+
+const description = `${formattedCategories} ${
+	price ? ' • ' + price : ''
+} • 🎫 • ${rating} ⭐ (${reviews}+)`;
 
 const About = () => {
 	return (
 		<View>
 			<RestaurantImage uri={image} />
-			<RestaurantName name={title} />
+			<RestaurantName name={name} />
 			<RestaurantDescription description={description} />
 		</View>
 	);
