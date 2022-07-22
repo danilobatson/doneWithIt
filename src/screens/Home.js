@@ -24,6 +24,10 @@ const Home = () => {
 			<ScrollView showsHorizontalScrollIndicator={false}>
 				<Categories />
 				<RestaurantItem />
+				<RestaurantItem />
+				<RestaurantItem />
+				<RestaurantItem />
+				<RestaurantItem />
 			</ScrollView>
 		</SafeAreaView>
 	);
