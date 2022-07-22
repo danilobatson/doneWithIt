@@ -6,12 +6,15 @@ import {
 	ScollView,
 	ScrollView,
 } from 'react-native';
+import { Divider } from 'react-native-elements';
+
 import React, { useState, useEffect } from 'react';
 import {
 	HeaderTabs,
 	SearchBar,
 	Categories,
 	RestaurantItem,
+	BottomTabs,
 } from '../components';
 
 import { localRestaurants } from '../data/';
@@ -55,13 +58,15 @@ const Home = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.subContainer}>
-				<HeaderTabs />
+				<HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
 				<SearchBar cityHandler={setCity} />
 			</View>
 			<ScrollView>
 				<Categories />
 				<RestaurantItem restaurantData={restaurantData} />
 			</ScrollView>
+			<Divider width={1} />
+			<BottomTabs />
 		</SafeAreaView>
 	);
 };
