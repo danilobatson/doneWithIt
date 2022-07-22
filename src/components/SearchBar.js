@@ -8,23 +8,18 @@ const SearchBar = () => {
 	return (
 		<View style={styles.searchContainer}>
 			<GooglePlacesAutocomplete
-				renderLeftButton={() => (
-					<View style={styles.leftBtnContainer}>
-						<Ionicons name='location-sharp' size={24} color='black' />
-					</View>
-				)}
-				renderRightButton={() => (
-					<View style={styles.rightBtnContainer}>
-						<AntDesign name='clockcircle' size={11} color='black' />
-						<Text> Search</Text>
-					</View>
-				)}
+				query={{ key: 'AIzaSyAXS1OBvjittEuZ3qf07lpWnZKoB0yvCTE' }}
+				onPress={(data, details = null) => {
+					console.log(data.description);
+					const city = data.description.split(',')[0];
+					cityHandler(city);
+				}}
 				placeholder='Search'
 				styles={{
 					textInput: {
 						backgroundColor: '#eee',
 						borderRadius: 20,
-						fontWeight: "700",
+						fontWeight: '700',
 						marginTop: 7,
 					},
 					textInputContainer: {
@@ -35,6 +30,29 @@ const SearchBar = () => {
 						marginRight: 10,
 					},
 				}}
+				renderLeftButton={() => (
+					<View style={{ marginLeft: 10 }}>
+						<Ionicons name='location-sharp' size={24} />
+					</View>
+				)}
+				renderRightButton={() => (
+					<View
+						style={{
+							flexDirection: 'row',
+							marginRight: 8,
+							backgroundColor: 'white',
+							padding: 9,
+							borderRadius: 30,
+							alignItems: 'center',
+						}}>
+						<AntDesign
+							name='clockcircle'
+							size={11}
+							style={{ marginRight: 6 }}
+						/>
+						<Text>Search</Text>
+					</View>
+				)}
 			/>
 		</View>
 	);
