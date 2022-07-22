@@ -1,14 +1,13 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { localRestaurants } from '../data';
 
-const RestaurantItem = () => {
+const RestaurantItem = ({ restaurantData }) => {
 	return (
 		<>
-			{localRestaurants.map((place) => {
+			{restaurantData.map((place, index) => {
 				return (
-					<TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
+          <TouchableOpacity key={index} activeOpacity={1} style={{ marginBottom: 30 }}>
 						<View style={styles.container}>
 							<RestaurantImage uri={place.image_url} />
 							<RestaurantInfo name={place.name} rating={place.rating} />
