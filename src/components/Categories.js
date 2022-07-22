@@ -9,6 +9,7 @@ const Categories = () => {
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				data={items}
+				keyExtractor={(item) => item.text}
 				renderItem={({ item }) => {
 					return (
 						<View style={styles.iconsList}>
@@ -17,9 +18,7 @@ const Categories = () => {
 						</View>
 					);
 				}}
-				keyExtractor={(item) => item.text}
 			/>
-			<Text>Why Is Courtnie Wylin</Text>
 		</View>
 	);
 };
@@ -33,7 +32,8 @@ const styles = StyleSheet.create({
 		resizeMode: 'contain',
 	},
 	iconsList: {
-		padding: 10,
+		paddingVertical: 10,
+		paddingLeft: 20,
 	},
 	iconsText: {
 		fontSize: 13,

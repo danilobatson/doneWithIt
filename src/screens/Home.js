@@ -1,6 +1,18 @@
-import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	SafeAreaView,
+	View,
+	ScollView,
+	ScrollView,
+} from 'react-native';
 import React from 'react';
-import { HeaderTabs, SearchBar, Categories } from '../components';
+import {
+	HeaderTabs,
+	SearchBar,
+	Categories,
+	RestaurantItem,
+} from '../components';
 
 const Home = () => {
 	return (
@@ -8,8 +20,11 @@ const Home = () => {
 			<View style={styles.subContainer}>
 				<HeaderTabs />
 				<SearchBar />
-      </View>
-      <Categories />
+			</View>
+			<ScrollView showsHorizontalScrollIndicator={false}>
+				<Categories />
+				<RestaurantItem />
+			</ScrollView>
 		</SafeAreaView>
 	);
 };

@@ -1,7 +1,6 @@
 import HeaderTabs from './HeaderTabs';
 import Categories from './Categories';
 import SearchBar from './SearchBar';
-// import Download from './Download';
-// import SectionWrapper from './SectionWrapper';
+import RestaurantItem from './RestaurantItem';
 
-export { SearchBar, HeaderTabs, Categories };
+export { SearchBar, HeaderTabs, Categories, RestaurantItem };
