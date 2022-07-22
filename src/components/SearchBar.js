@@ -9,7 +9,7 @@ const SearchBar = () => {
 		<View style={styles.searchContainer}>
 			<GooglePlacesAutocomplete
 				renderLeftButton={() => (
-					<View>
+					<View style={styles.leftBtnContainer}>
 						<Ionicons name='location-sharp' size={24} color='black' />
 					</View>
 				)}
@@ -24,7 +24,7 @@ const SearchBar = () => {
 					textInput: {
 						backgroundColor: '#eee',
 						borderRadius: 20,
-						fontWeight: 700,
+						fontWeight: "700",
 						marginTop: 7,
 					},
 					textInputContainer: {
@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
 	searchContainer: {
 		marginTop: 15,
 		flexDirection: 'row',
+	},
+	leftBtnContainer: {
+		marginLeft: 8,
 	},
 	rightBtnContainer: {
 		flexDirection: 'row',

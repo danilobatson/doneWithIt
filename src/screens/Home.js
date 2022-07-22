@@ -1,6 +1,6 @@
 import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 import React from 'react';
-import { HeaderTabs, SearchBar } from '../components';
+import { HeaderTabs, SearchBar, Categories } from '../components';
 
 const Home = () => {
 	return (
@@ -8,7 +8,8 @@ const Home = () => {
 			<View style={styles.subContainer}>
 				<HeaderTabs />
 				<SearchBar />
-			</View>
+      </View>
+      <Categories />
 		</SafeAreaView>
 	);
 };
