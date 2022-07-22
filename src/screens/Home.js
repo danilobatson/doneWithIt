@@ -1,7 +1,6 @@
 import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 import React from 'react';
 import { HeaderTabs, SearchBar } from '../components';
-import { Feather } from '@expo/vector-icons';
 
 const Home = () => {
 	return (
@@ -10,8 +9,6 @@ const Home = () => {
 				<HeaderTabs />
 				<SearchBar />
 			</View>
-			<Text>Why is Courtnie this way?</Text>
-			<Feather name='search' size={32} />
 		</SafeAreaView>
 	);
 };
