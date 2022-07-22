@@ -1,25 +1,32 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { localRestaurants } from '../data';
 
 const RestaurantItem = () => {
 	return (
-		<TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
-			<View style={styles.container}>
-				<RestaurantImage />
-				<RestaurantInfo />
-			</View>
-		</TouchableOpacity>
+		<>
+			{localRestaurants.map((place) => {
+				return (
+					<TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
+						<View style={styles.container}>
+							<RestaurantImage uri={place.image_url} />
+							<RestaurantInfo name={place.name} rating={place.rating} />
+						</View>
+					</TouchableOpacity>
+				);
+			})}
+		</>
 	);
 };
 
-const RestaurantImage = () => {
+const RestaurantImage = ({ uri }) => {
 	return (
 		<>
 			<Image
 				style={styles.image}
 				source={{
-					uri: 'https://images.prismic.io/spicygreenbook/5ed4d883-a7fd-4ec4-94f0-f167550d1414_NatashaLee-SGB-JerkMuva-5338.jpg?auto=compress,format&w=2600',
+					uri,
 				}}
 			/>
 			<TouchableOpacity
@@ -31,15 +38,15 @@ const RestaurantImage = () => {
 	);
 };
 
-const RestaurantInfo = () => {
+const RestaurantInfo = ({ name, rating }) => {
 	return (
 		<View style={styles.details}>
 			<View>
-				<Text style={styles.title}>Courntie's Citchen</Text>
+				<Text style={styles.title}>{name}</Text>
 				<Text style={styles.time}>45 - 60 • min</Text>
 			</View>
 			<View style={styles.ratingView}>
-				<Text>4.8</Text>
+				<Text>{rating}</Text>
 			</View>
 		</View>
 	);

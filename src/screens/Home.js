@@ -21,12 +21,8 @@ const Home = () => {
 				<HeaderTabs />
 				<SearchBar />
 			</View>
-			<ScrollView showsHorizontalScrollIndicator={false}>
+			<ScrollView>
 				<Categories />
-				<RestaurantItem />
-				<RestaurantItem />
-				<RestaurantItem />
-				<RestaurantItem />
 				<RestaurantItem />
 			</ScrollView>
 		</SafeAreaView>
