@@ -56,7 +56,7 @@ const Home = () => {
 		<SafeAreaView style={styles.container}>
 			<View style={styles.subContainer}>
 				<HeaderTabs />
-				<SearchBar />
+				<SearchBar cityHandler={setCity} />
 			</View>
 			<ScrollView>
 				<Categories />
