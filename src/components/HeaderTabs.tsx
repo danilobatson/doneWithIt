@@ -1,22 +1,26 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React, { useState } from 'react';
+import React from 'react';
 
-const HeaderTabs = ({activeTab, setActiveTab}) => {
+interface HeaderTabsProps {
+	activeTab: string;
+	setActiveTab: (activeTab: string) => void;
+}
 
-	return (
-		<View style={styles.container}>
-			<HeaderButton
-				activeTab={activeTab}
-				setActiveTab={setActiveTab}
-				text='Delivery'
-			/>
-			<HeaderButton
-				activeTab={activeTab}
-				setActiveTab={setActiveTab}
-				text='Pickup'
-			/>
-		</View>
-	);
+const HeaderTabs: React.FC<HeaderTabsProps> = ({ activeTab, setActiveTab }) => {
+  return (
+    <View style={styles.container}>
+      <HeaderButton
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        text='Delivery'
+      />
+      <HeaderButton
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        text='Pickup'
+      />
+    </View>
+  );
 };
 
 export default HeaderTabs;
