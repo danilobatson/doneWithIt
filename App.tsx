@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home, RestaurantDetail as Detail } from './src/screens';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { StackNavigationProp } from '@react-navigation/stack';
 
 
 type RootStackParamList = {

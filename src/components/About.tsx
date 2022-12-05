@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 
-interface AboutProps {
+export interface BusinessPropData {
   name: string;
   image: string;
   price: string;
   rating: number;
   reviews: number;
-  categories: { title: string; alias: string }[];
+  categories: { title: string; alias?: string }[];
 }
-const About: React.FC<AboutProps> = ({
+const About: React.FC<BusinessPropData> = ({
   name,
   image,
   price,
@@ -17,7 +17,6 @@ const About: React.FC<AboutProps> = ({
   reviews,
   categories,
 }) => {
-  console.log(categories);
   const formattedCategories = categories.map((cat) => cat.title).join(' • ');
   const description = `${formattedCategories} ${
     price ? ' • ' + price : ''
@@ -59,7 +58,6 @@ const RestaurantDescription: React.FC<{ description: string }> = ({
       fontSize: 15.5,
     }}
   >
-    Hello
     {description}
   </Text>
 );
