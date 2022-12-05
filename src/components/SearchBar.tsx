@@ -4,7 +4,10 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
-const SearchBar = ({ cityHandler }) => {
+interface SearchBarProps {
+	cityHandler: (city: string) => void;
+}
+const SearchBar: React.FC<SearchBarProps>= ({ cityHandler }) => {
 	return (
 		<View style={styles.searchContainer}>
 			<GooglePlacesAutocomplete
