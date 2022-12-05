@@ -12,7 +12,7 @@ interface DetailNavigationProp {
   navigate: any;
 }
 
-type HomeScreenNaviagationProp = HomeScreenProps['navigation'];
+type HomeScreenNavigationProp = HomeScreenProps['navigation'];
 
 interface RestaurantItemProps {
   restaurantData: {
@@ -22,7 +22,7 @@ interface RestaurantItemProps {
     rating: number;
     review_count: number;
   }[];
-  navigation: DetailNavigationProp | HomeScreenNaviagationProp;
+  navigation: DetailNavigationProp | HomeScreenNavigationProp;
 }
 const RestaurantItem: React.FC<RestaurantItemProps> = ({
   restaurantData,
