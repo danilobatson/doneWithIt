@@ -3,13 +3,16 @@ import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import type {
-  DetailScreenProps,
+	DetailScreenProps,
+	HomeScreenProps,
 } from '../../App';
 
-interface NavigationProp {
+interface DetailNavigationProp {
   navigation: DetailScreenProps['navigation'];
   navigate: any;
 }
+
+type HomeScreenNaviagationProp = HomeScreenProps['navigation'];
 
 interface RestaurantItemProps {
   restaurantData: {
@@ -19,7 +22,7 @@ interface RestaurantItemProps {
     rating: number;
     review_count: number;
   }[];
-  navigation: NavigationProp;
+  navigation: DetailNavigationProp | HomeScreenNaviagationProp;
 }
 const RestaurantItem: React.FC<RestaurantItemProps> = ({
   restaurantData,
@@ -53,7 +56,6 @@ interface RestaurantImageProps {
 	uri: string;
 }
 const RestaurantImage: React.FC<RestaurantImageProps> = ({ uri }) => {
-  console.log(uri);
   return (
     <>
       <Image
