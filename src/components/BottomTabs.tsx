@@ -13,8 +13,12 @@ export default function BottomTabs() {
 		</View>
 	);
 }
-
-const Icon = (props) => (
+interface IconProps {
+	icon: string;
+	text: string;
+}
+const Icon: React.FC<IconProps> = (props) => {
+	return (
 	<TouchableOpacity>
 		<View>
 			<FontAwesome5
@@ -28,7 +32,7 @@ const Icon = (props) => (
 			<Text>{props.text}</Text>
 		</View>
 	</TouchableOpacity>
-);
+)};
 
 const styles = StyleSheet.create({
 	container: {
